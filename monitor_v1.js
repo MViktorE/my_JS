@@ -1,4 +1,4 @@
-let names = ['Кафе','Джем','Мёд','Бар','Яблоко','Ресторан','Груша','Кокос','Ананас','Реклама','Мода','Туризм','Радио','Телевизор','Табак','Пивко','Водочка','Клуб','Казино','Футбол','Судоверфь','Автомобиль','Авиация','Таити','Карибы']
+let names = ['Кафе','Джем','Мёд','Бар','Яблоко','Ресторан','Груша','Кокос','Ананас','Реклама','Мода','Туризм','Радио','Телевизор','Табак','Пивко','Водочка','Клуб','Казино','Футбол','Судоверфь','Автомобиль','Авиация','Таити','Карибы','Арбуэ']
 let buisness = 1;
 (() => {
 	let buisness = 1;
@@ -38,14 +38,14 @@ let buisness = 1;
 		d = new Date();
 		d.setMinutes(d.getMinutes() + addMin);
 		d.setHours(d.getHours() + timezone);
-		console.log(d.getHours(),d.getMinutes(),d.getSeconds(), names[buisness-1],zahvat);
+		console.log(d.getHours(),d.getMinutes(), names[buisness-1],zahvat);
 		(function(){})
 		zahvat = '';
 		}
 		flagPrev[buisness - 1] = flag[buisness - 1];
 		clansPrev[buisness - 1] = clans[buisness - 1];
 		buisness++;
-		if (buisness == 26){
+		if (buisness == names.length+1){
 			buisness = 1;
 		}
 		// сonsol.log(ks)
