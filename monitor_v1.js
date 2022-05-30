@@ -1,3 +1,6 @@
+const win = window.open('about:blank');
+win.document.write('<div id="app"></div');
+
 let names = ['Кафе','Джем','Мёд','Бар','Яблоко','Ресторан','Груша','Кокос','Ананас','Реклама','Мода','Туризм','Радио','Телевизор','Табак','Пивко','Водочка','Клуб','Казино','Футбол','Судоверфь','Автомобиль','Авиация','Таити','Карибы','Арбуэ']
 let buisness = 1;
 (() => {
@@ -39,6 +42,12 @@ let buisness = 1;
 		d.setMinutes(d.getMinutes() + addMin);
 		d.setHours(d.getHours() + timezone);
 		console.log(d.getHours(),d.getMinutes(), names[buisness-1],zahvat);
+		var temp = '' + d.getHours() + ':' + d.getMinutes() + ' ' + names[buisness-1] + zahvat
+		win.document.querySelector('#app').insertAdjacentHTML("beforeend", `
+			<div>
+			${temp}<br>
+			</div>
+		`);		
 		(function(){})
 		zahvat = '';
 		}
